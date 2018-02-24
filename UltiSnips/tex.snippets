@@ -1,0 +1,41 @@
+snippet ev "Expectation value"
+\expval{$1}{$2} $0
+endsnippet
+
+snippet ip "Inner product"
+\braket{$1}{$2} $0
+endsnippet
+
+snippet ips "Inner product (with self)"
+\braket{$1}{$1} $0
+endsnippet
+
+snippet mel "Matrix element"
+\matrixel{$1}{$2}{$3} $0
+endsnippet
+
+snippet spup "Spin up"
+\ket{\uparrow} $0
+endsnippet
+
+snippet spown "Spin down"
+\ket{\downarrow} $0
+endsnippet
+
+snippet cpdet "Cross product as determinate" b
+\mdet{
+\vu{x}     & \vu{y}     & \vu{z} \\\\
+\partial_x & \partial_y & \partial_z \\\\
+$1_x & $1_y & $1_z }
+$0
+endsnippet
+
+snippet cpeval "Cross product written out" b
+\qty(\pdv{$1_y}{z} - \pdv{$1_z}{y})\vu{x}
+- \qty(\pdv{$1_x}{z} - \pdv{$1_z}{x})
++ \qty(\pdv{$1_x}{y} - \pdv{$1_y}{x})
+endsnippet
+
+snippet comm "Commutator"
+\comm{$1}{$2} $0
+endsnippet
